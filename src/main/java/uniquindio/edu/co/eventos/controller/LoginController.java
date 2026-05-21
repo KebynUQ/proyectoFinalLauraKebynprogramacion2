@@ -116,7 +116,7 @@ public class LoginController {
     private void abrirMainLayout() {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/uniquindio/edu/co/eventos/view/MainLayout.fxml")
+                    getClass().getResource("/uniquindio/edu/co/evento/view/MainLayout.fxml")
             );
             Scene scene = new Scene(loader.load(), 1100, 700);
             Stage stage = (Stage) txtCorreo.getScene().getWindow();

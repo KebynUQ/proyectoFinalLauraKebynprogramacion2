@@ -151,7 +151,7 @@ public class MainController {
 
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/uniquindio/edu/co/eventos/view/LoginView.fxml")
+                    getClass().getResource("/uniquindio/edu/co/evento/view/LoginView.fxml")
             );
             Scene scene = new Scene(loader.load(), 900, 600);
             Stage stage = (Stage) contentArea.getScene().getWindow();
@@ -166,7 +166,7 @@ public class MainController {
     public void cargarVista(String vista) {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/uniquindio/edu/co/eventos/view/" + vista)
+                    getClass().getResource("/uniquindio/edu/co/evento/view/" + vista)
             );
             Node node = loader.load();
             contentArea.getChildren().setAll(node);

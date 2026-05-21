@@ -16,7 +16,7 @@ public class MainApp extends Application {
         DataSeeder.cargarDatosIniciales();
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                MainApp.class.getResource("/uniquindio/edu/co/eventos/view/LoginView.fxml")
+                MainApp.class.getResource("/uniquindio/edu/co/evento/view/LoginView.fxml")
         );
 
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
