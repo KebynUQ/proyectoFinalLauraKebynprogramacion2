@@ -396,4 +396,4 @@ Generar reporte CSV de compras, reporte PDF de ventas y métricas de ocupación 
 
 ## Diagrama de clases
 
-![Diagrama de clases](./diagramaDeClases.png)
+![Diagrama de clases](./diagramaDeClases1.png)
