@@ -9,7 +9,7 @@ Kebyn Julián Ochoa Pérez – Laura Vanessa Guerrero Blanco
 
 ---
 
-## 1. Abstracción
+## 1. Abstracción 
 
 ### ¿Qué se solicita finalmente?
 
