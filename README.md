@@ -9,7 +9,93 @@ Kebyn Julián Ochoa Pérez – Laura Vanessa Guerrero Blanco
 
 ---
 
-## 1. Abstracción 
+## Guía de ejecución en IntelliJ IDEA
+
+Esta sección está pensada para estudiantes que normalmente trabajan desde IntelliJ IDEA. Maven sigue siendo importante porque administra las dependencias del proyecto, pero la forma más práctica de abrir, configurar y ejecutar la aplicación es directamente desde el IDE.
+
+### Estructura general del proyecto
+
+- `src/main/java/co/edu/uniquindio/eventos/model`: entidades principales del sistema.
+- `src/main/java/co/edu/uniquindio/eventos/model/enums`: enumeraciones de estados.
+- `src/main/java/co/edu/uniquindio/eventos/service`: lógica principal de la aplicación.
+- `src/main/java/co/edu/uniquindio/eventos/controller`: controladores de las vistas JavaFX.
+- `src/main/java/co/edu/uniquindio/eventos/patterns`: implementación de los patrones de diseño.
+- `src/main/java/co/edu/uniquindio/eventos/repository/DatosPrueba.java`: datos iniciales de prueba.
+- `src/main/resources/views`: vistas FXML.
+- `src/main/resources/styles`: estilos CSS.
+
+### Requisitos para ejecutar
+
+Para ejecutar el proyecto se necesita:
+
+- IntelliJ IDEA Community o Ultimate.
+- JDK 17 o superior.
+- Maven configurado en el proyecto.
+- JavaFX configurado mediante las dependencias del `pom.xml`.
+
+Si IntelliJ muestra un aviso como `JDK missing`, se debe seleccionar un JDK instalado o descargar uno desde el mismo IDE.
+
+### Cómo abrir el proyecto en IntelliJ IDEA
+
+1. Abrir IntelliJ IDEA.
+2. Seleccionar `Open`.
+3. Buscar la carpeta raíz del proyecto.
+4. Seleccionar la carpeta donde está el archivo `pom.xml`.
+5. Esperar a que IntelliJ cargue las dependencias de Maven.
+6. Verificar que el proyecto reconozca correctamente el JDK y no muestre errores de configuración.
+
+### Configurar el JDK
+
+En IntelliJ IDEA:
+
+1. Ir a `File`.
+2. Entrar a `Project Structure`.
+3. En `Project SDK`, seleccionar `JDK 17` o superior.
+4. Aplicar los cambios con `Apply` y luego `OK`.
+
+### Configurar la clase principal
+
+Para ejecutar la aplicación correctamente:
+
+1. Ir a la parte superior derecha de IntelliJ.
+2. Abrir el menú de configuraciones.
+3. Seleccionar `Edit Configurations`.
+4. Presionar el botón `+`.
+5. Elegir `Application`.
+6. En `Main class`, colocar:
+
+`co.edu.uniquindio.eventos.app.Launcher`
+
+7. En `Working directory`, dejar la carpeta raíz del proyecto.
+8. Guardar la configuración con `Apply` y luego `OK`.
+9. Presionar el botón verde de ejecutar.
+
+### Clase principal del proyecto
+
+La clase que se debe ejecutar es:
+
+`co.edu.uniquindio.eventos.app.Launcher`
+
+Esta clase llama internamente a `MainApp`.
+
+No se debe ejecutar directamente `MainApp`, porque `Launcher` es el punto de entrada correcto y ayuda a evitar errores relacionados con el runtime de JavaFX en algunos entornos.
+
+### Ejecución con Maven
+
+También se puede ejecutar desde consola con:
+
+```bash
+mvn clean compile
+mvn javafx:run
+```
+
+### Nota sobre Maven
+
+Aunque Maven se usa para compilar, descargar dependencias y ejecutar pruebas, para el trabajo diario del proyecto se recomienda usar IntelliJ IDEA con la configuración de ejecución apuntando a `co.edu.uniquindio.eventos.app.Launcher`.
+
+---
+
+## 1. Abstracción
 
 ### ¿Qué se solicita finalmente?
 
